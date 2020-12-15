@@ -4,7 +4,7 @@ def howSum1(targetSum, n):
     if targetSum<0: return None
 
     for num in n:
-        remainder = targetSum - num;
+        remainder = targetSum - num
         remainderResult = howSum1(remainder, n)
         if remainderResult != None:
             remainderResult.append(num)
@@ -28,4 +28,4 @@ def howSum2(targetSum, n, memo={}):
 
     memo[targetSum] = None
     return None
-print(howSum2(300,[7,14]))
+print(howSum2(100,[5,25]))
